@@ -2,6 +2,9 @@
 
 A simple Python HTTP server for previewing your `README.md` files in the browser with clean GitHub-like styles.
 
+<details>
+<summary><strong>📘 Show more details</strong></summary>
+
 ---
 
 ## Features
@@ -91,3 +94,5 @@ project/
 ---
 
 Created to simplify Markdown preview during development.
+
+</details>
