@@ -1,64 +1,93 @@
-# PrivatBankRates
+# README Markdown Server
 
-**PrivatBankRates** is an asynchronous command-line utility written in Python for retrieving and displaying currency exchange rates from PrivatBank over a specified number of days.  
-The tool allows you to select specific currencies and logs all requests for further reference.
+A simple Python HTTP server for previewing your `README.md` files in the browser with clean GitHub-like styles.
 
 ---
 
 ## Features
 
-- Fetches exchange rates for up to 10 previous days
-- Supports custom currency selection (e.g., USD, EUR, PLN)
-- Asynchronous HTTP requests via `aiohttp`
-- Request logging to `logs.txt` using `aiofile` and `aiopath`
-- Colored console output
-
----
-
-## Requirements
-
-- Python >=3.8, <3.13
-- Poetry (recommended) or pip
-
-Dependencies:
-
-- `aiohttp`
-- `aiofile`
-- `aiopath`
-- `colorama`
+- Renders Markdown content styled similar to GitHub
+- "Refresh" button to reload the content manually
+- Minimal dependencies (`markdown` library)
+- Simple startup with one command
+- Graceful server shutdown with `Ctrl+C`
 
 ---
 
 ## Installation
 
-Using Poetry:
+Install the `markdown` library:
 
 ```bash
-poetry install
+pip install markdown
 ```
---- 
-
-
-## Usage
-
-Run the script with:
-
-```bash
-python privatbank_rates.py <days> [currency1 currency2 ...]
-```
-Arguments:
-
-`<days>`  — number of days to retrieve (1–10)
-<br />
-`[currency1 currency2 ...]`  — optional list of currencies to display (default: USD, EUR)
-
---- 
-
-## API Documentation
-
-This project uses the public PrivatBank API:
-
-[PrivatBank Exchange Rates API Documentation](https://api.privatbank.ua/#p24/exchange)
 
 ---
 
+## How to Run
+
+Navigate to the folder containing the script:
+
+```bash
+cd path/to/your/project
+```
+
+Start the server:
+
+```bash
+python server_readme.py
+```
+
+You will see a message:
+
+```
+Serving README.md at http://localhost:8000
+```
+
+Open your browser and go to:
+
+```
+http://localhost:8000/
+```
+
+The rendered Markdown will appear.
+
+---
+
+## Refreshing
+
+Use the **"Refresh"** button at the top-right corner of the page to reload the latest content from `README.md` without restarting the server.
+
+---
+
+## Stopping the Server
+
+To stop the server, focus the terminal window and press:
+
+```
+Ctrl + C
+```
+
+The server will shut down gracefully.
+
+---
+
+## Project Structure
+
+```
+project/
+├── server_readme.py   # Main Python server script
+├── README.md          # This file
+```
+
+---
+
+## Possible Enhancements
+
+- Auto-reload when `README.md` changes
+- Inline editing and saving from the browser
+- Configurable port and file path via command-line arguments
+
+---
+
+Created to simplify Markdown preview during development.
