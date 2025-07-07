@@ -119,7 +119,7 @@ def run(server_class=HTTPServer, handler_class=ReadmeHandler, port=8000):
 
     signal.signal(signal.SIGINT, signal_handler)  # обробка Ctrl+C для завершення сервера
 
-    print(f"Serving README.md at http://localhost:{port}")
+    print(f"Serving README_dev.md at http://localhost:{port}")
     httpd.serve_forever()  # запуск сервера
 
 if __name__ == "__main__":
