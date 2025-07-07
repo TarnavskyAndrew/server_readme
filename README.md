@@ -3,7 +3,7 @@
 A simple Python HTTP server for previewing your `README.md` files in the browser with clean GitHub-like styles.
 
 <details>
-<summary><strong>📘 Show more details</strong></summary>
+<summary><strong>Show more details</strong></summary>
 
 ---
 
@@ -44,7 +44,7 @@ python server_readme.py
 You will see a message:
 
 ```
-Serving README.md at http://localhost:8000
+Serving README_dev.md  at http://localhost:8000
 ```
 
 Open your browser and go to:
@@ -59,7 +59,7 @@ The rendered Markdown will appear.
 
 ## Refreshing
 
-Use the **"Refresh"** button at the top-right corner of the page to reload the latest content from `README.md` without restarting the server.
+Use the **"Refresh"** button at the top-right corner of the page to reload the latest content from `README_dev.md` without restarting the server.
 
 ---
 
@@ -80,6 +80,7 @@ The server will shut down gracefully.
 ```
 project/
 ├── server_readme.py   # Main Python server script
+├── README_dev.md      # Working file
 ├── README.md          # This file
 ```
 
@@ -87,7 +88,7 @@ project/
 
 ## Possible Enhancements
 
-- Auto-reload when `README.md` changes
+- Auto-reload when `README_dev.md` changes
 - Inline editing and saving from the browser
 - Configurable port and file path via command-line arguments
 
