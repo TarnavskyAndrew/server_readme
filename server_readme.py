@@ -4,12 +4,12 @@ import os
 import signal
 import sys
 
-# run this script to start a simple HTTP server that serves the README_dew.md file as HTML:
+# run this script to start a simple HTTP server that serves the README_dev.md file as HTML:
 # python server_readme.py
 # http://localhost:8000/
 
 
-README_PATH = os.path.join(os.path.dirname(__file__), "README_dew.md")
+README_PATH = os.path.join(os.path.dirname(__file__), "README_dev.md")
 
 # клас обробника запитів HTTP
 class ReadmeHandler(BaseHTTPRequestHandler):
